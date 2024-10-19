@@ -1,23 +1,23 @@
-name: Deploy WordPress Plugin
+# name: Deploy WordPress Plugin
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
 
-    - name: Deploy to WordPress via FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: ftp://your-ftp-server.com
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./
-        server-dir: /path/to/wordpress/wp-content/plugins/wp-react-plugin/
+#       - name: Deploy to WordPress via FTP
+#         uses: SamKirkland/FTP-Deploy-Action@4.0.0
+#         with:
+#           server: ftp://your-ftp-server.com
+#           username: ${{ secrets.FTP_USERNAME }}
+#           password: ${{ secrets.FTP_PASSWORD }}
+#           local-dir: ./
+#           server-dir: /public_html/wp-content/plugins/ylc-wp-plugin/
